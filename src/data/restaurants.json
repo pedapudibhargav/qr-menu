@@ -1,0 +1,9 @@
+{
+   "burger-king": {
+        "id": 11,
+        "name": "Burger King",
+        "logo_url": "",
+        "slung_url":"burger-king",
+        "menu_end_point": ""
+    }
+}
