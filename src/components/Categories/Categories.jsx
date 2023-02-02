@@ -6,12 +6,13 @@ export default function Categories(props) {
     const getButtonVariant = (variantId) => {
         return variantId === props.currentCategoryId ? 'contained' : 'outlined';
     }
+    // color="secondary"
     const getButtons = () => {
         return <>
             <Button variant={getButtonVariant(0)} onClick={() => handleButtonClick(0)}>All</Button>
             {props.categories.map((category) => {
                 return (
-                    <Button variant={getButtonVariant(category.id)} onClick={() => handleButtonClick(category.id)}>
+                    <Button variant={getButtonVariant(category.id)} key={category.id} onClick={() => handleButtonClick(category.id)}>
                         {category.name}
                     </Button>
                 );
