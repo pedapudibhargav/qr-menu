@@ -78,7 +78,6 @@ function Restaurant(props) {
 
   return (
     <div>
-      <>{JSON.stringify(restaurant)}</>
       <Header restaurant={restaurant}></Header>
       {
         restaurant === '' ?
