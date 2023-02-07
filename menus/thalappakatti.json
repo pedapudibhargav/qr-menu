@@ -1,0 +1,90 @@
+{
+    "catergories": [
+        {
+            "id": 1,
+            "name": "Biryani"
+        },
+        {
+            "id": 2,
+            "name": "Dosai"
+        },
+        {
+            "id": 3,
+            "name": "Juice"
+        }   
+    ],
+    "items": [
+        {
+            "id": "1",
+            "category_id": "1",
+            "name": "Mutton Biryani",
+            "price": "20.69",
+            "description": "A ¼ lb* of flame-grilled beef patty topped with juicy tomatoes, crisp lettuce, creamy mayonnaise, ketchup, crunchy pickles, and sliced white onions on a toasted sesame seed bun. *Weight based on pre-cooked patty.",
+            "images": ["https://www.cubesnjuliennes.com/wp-content/uploads/2021/03/Best-Mutton-Biryani-Recipe.jpg"]
+        },
+        {
+            "id": "2",
+            "category_id": "1",
+            "name": "Chicken Biryani",
+            "price": "22.90",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, consectetur!",
+            "images": ["https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"]
+        },
+        {
+            "id": "3",
+            "category_id": "1",
+            "name": "Kola Biriyani",
+            "price": "19.30",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sit suscipit beatae.",
+            "images": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTuHUQLJn67QAzOASPqxzx1awJG9LwqkdcNA&usqp=CAU"]
+        },
+        {
+            "id": "4",
+            "category_id": "2",
+            "name": "Plain Dosa",
+            "price": "12.90",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, fugiat aspernatur?",
+            "images": ["https://www.cookingcarnival.com/wp-content/uploads/2021/04/Instant-dosa-1-500x500.jpg"]
+        },
+        {
+            "id": "5",
+            "category_id": "2",
+            "name": "Masala Dosa",
+            "price": "13.30",
+            "description": "Lightly breaded chicken topped with crisp lettuce and creamy mayonnaise on a sesame seed bun.",
+            "images": ["https://recipes.timesofindia.com/thumb/54289752.cms?width=1200&height=900"]
+        },
+        {
+            "id": "6",
+            "category_id": "2",
+            "name": "Egg Dosa",
+            "price": "15.50",
+            "description": "Breaded, crispy white meat chicken perfect for dipping in any of our delicious dipping sauces.",
+            "images": ["https://www.archanaskitchen.com/images/archanaskitchen/10-Brands/Del_Monte_Mayo/Egg_Dosa_Recipe_With_Cheesy_Garlic_Mayo-2.jpg"]
+        },
+        {
+            "id": "7",
+            "category_id": "3",
+            "name": "Soda",
+            "price": "2.90",
+            "description": "Breaded, crispy white meat chicken perfect for dipping in any of our delicious dipping sauces.",
+            "images": []
+        },
+        {
+            "id": "8",
+            "category_id": "3",
+            "name": "Lime Soda",
+            "price": "3.50",
+            "description": "Breaded, crispy white meat chicken perfect for dipping in any of our delicious dipping sauces.",
+            "images": []
+        },
+        {
+            "id": "9",
+            "category_id": "3",
+            "name": "Lime Soda(sweet and salt)",
+            "price": "3.90",
+            "description": "Breaded, crispy white meat chicken perfect for dipping in any of our delicious dipping sauces.",
+            "images": []
+        }
+    ]
+}
