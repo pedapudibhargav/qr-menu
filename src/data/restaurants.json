@@ -1,16 +1,23 @@
 [
     {
-        "id": 11,
-        "name": "Burger King",
-        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Burger_King_1994_logo.png/1024px-Burger_King_1994_logo.png",
-        "slung_url": "burger-king",
-        "menu_end_point": ""
-    },
-    {
         "id": 10,
         "name": "Burger King Test",
         "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Burger_King_1994_logo.png/1024px-Burger_King_1994_logo.png",
         "slung_url": "burger-king-local",
-        "menu_end_point": ""
+        "menu_end_point": "burger-king.json"
+    },
+    {
+        "id": 11,
+        "name": "Burger King",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Burger_King_1994_logo.png/1024px-Burger_King_1994_logo.png",
+        "slung_url": "burger-king",
+        "menu_end_point": "burger-king.json"
+    },
+    {
+        "id": 12,
+        "name": "Thalappakatti",
+        "logo_url": "https://thalappakatti.us/images/thalappakatti-logo-anim.gif",
+        "slung_url": "thalappakatti",
+        "menu_end_point": "thalappakatti.json"
     }
 ]

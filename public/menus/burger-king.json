@@ -1,0 +1,63 @@
+{
+    "catergories": [
+        {
+            "id": 1,
+            "name": "flame grilled burgers"
+        },
+        {
+            "id": 2,
+            "name": "chicken & more"
+        },
+        {
+            "id": 3,
+            "name": "sides"
+        }, {
+            "id" : 4,
+            "name" : "drinks & coffee"
+        }    
+    ],
+    "items": [
+        {
+            "id": "11",
+            "category_id": "1",
+            "name": "whopper",
+            "description": "A ¼ lb* of flame-grilled beef patty topped with juicy tomatoes, crisp lettuce, creamy mayonnaise, ketchup, crunchy pickles, and sliced white onions on a toasted sesame seed bun. *Weight based on pre-cooked patty.",
+            "images": ["https://cdn.sanity.io/images/czqk28jt/prod_bk_us/84743a96a55cb36ef603c512d5b97c9141c40a33-1333x1333.png?w=1077&q=40&fit=max&auto=format"]
+        },
+        {
+            "id": "12",
+            "category_id": "1",
+            "name": "double whopper",
+            "description": "Two ¼ lb.* flame-grilled beef patties with juicy tomatoes, crisp lettuce, creamy mayonnaise, ketchup, crunchy pickles, and sliced white onions on a toasted sesame seed bun.",
+            "images": ["https://cdn.sanity.io/images/czqk28jt/prod_bk_us/741f937b50b66ff1f6314046458cf3a4ffe30d8d-1333x1333.png?w=1077&q=40&fit=max&auto=format"]
+        },
+        {
+            "id": "13",
+            "category_id": "1",
+            "name": "triple whopper",
+            "description": "Three ¼ lb* flame-grilled beef patties with juicy tomatoes, crisp lettuce, creamy mayonnaise, ketchup, crunchy pickles, and sliced white onions on a toasted sesame seed bun.",
+            "images": ["https://cdn.sanity.io/images/czqk28jt/prod_bk_us/e96ea0e377da353577698176c3fd84c6a137dcce-1333x1333.png?w=1077&q=40&fit=max&auto=format"]
+        },
+        {
+            "id": "14",
+            "category_id": "1",
+            "name": "bacon king",
+            "description": "Two 1/4 lb* flame-grilled beef patties with crispy bacon, melted American cheese, ketchup, and creamy mayonnaise on a toasted sesame seed bun.",
+            "images": ["https://cdn.sanity.io/images/czqk28jt/prod_bk_us/60712f81a07316d3300b65823ab68b59def70c8e-1333x1333.png?w=1077&q=40&fit=max&auto=format"]
+        },
+        {
+            "id": "15",
+            "category_id": "2",
+            "name": "original chicken sandwich",
+            "description": "Lightly breaded chicken topped with crisp lettuce and creamy mayonnaise on a sesame seed bun.",
+            "images": ["https://cdn.sanity.io/images/czqk28jt/prod_bk_us/fc7c2a73e7a9bf14f3e3401bedcc090c4f421c67-1333x1333.png?w=750&q=40&fit=max&auto=format"]
+        },
+        {
+            "id": "16",
+            "category_id": "2",
+            "name": "chiken fries",
+            "description": "Breaded, crispy white meat chicken perfect for dipping in any of our delicious dipping sauces.",
+            "images": ["https://cdn.sanity.io/images/czqk28jt/prod_bk_us/840fba2112775ceeff32c96d1ac01131b7e96a03-1333x1333.png?w=1077&q=40&fit=max&auto=format"]
+        }
+    ]
+}
