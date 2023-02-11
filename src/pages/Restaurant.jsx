@@ -70,7 +70,7 @@ function Restaurant(props) {
             <MenuGrid menuItems={menu.items} currentCategoryId={currentCategoryId}></MenuGrid>
           </Container>
       }
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   )
 }
