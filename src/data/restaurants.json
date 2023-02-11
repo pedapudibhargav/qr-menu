@@ -1,5 +1,12 @@
 [
     {
+        "id": 9,
+        "name": "Taqueria Jalisco",
+        "logo_url": "https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_80,q_80,fl_lossy,dpr_2.0,c_fit,f_auto,h_80/kjzlqaxdreb8oihraftl",
+        "slung_url": "taqueriajalisco",
+        "menu_end_point": "taqueria-jalisco.json"
+    },
+    {
         "id": 10,
         "name": "Burger King Test",
         "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Burger_King_1994_logo.png/1024px-Burger_King_1994_logo.png",

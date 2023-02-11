@@ -9,7 +9,7 @@ export default function Categories(props) {
     // color="secondary"
     const getButtons = () => {
         return <>
-            <Button variant={getButtonVariant(0)} onClick={() => handleButtonClick(0)}>All</Button>
+            <Button variant={getButtonVariant(-1)} onClick={() => handleButtonClick(-1)}>All</Button>
             {props.categories.map((category) => {
                 return (
                     <Button variant={getButtonVariant(category.id)} key={category.id} onClick={() => handleButtonClick(category.id)}>

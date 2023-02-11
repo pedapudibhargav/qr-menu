@@ -42,10 +42,15 @@ const getRestaurant = () => {
     return '';
 }
 
+/** 
+ * ~~~~~~~~~~~~~~~~~~~~~~~
+ * Restaurant React component
+ * ~~~~~~~~~~~~~~~~~~~~~~~
+*/
 function Restaurant(props) {
   const [restaurant, setRestaurant] = useState(getRestaurant());
   const [menu, setMenu] = useState({});
-  const [currentCategoryId, setCurrentCategoryId] = useState(0);
+  const [currentCategoryId, setCurrentCategoryId] = useState(-1);
   const handleCategoryChange = (categoryIdIn) => {
     setCurrentCategoryId(categoryIdIn);
   }
@@ -58,55 +63,78 @@ function Restaurant(props) {
       });
   }, [])
 
+
+  /** Returns Price HTML */
+  const getPriceElement = (menuItem) => {
+    // Supports 2 JSON structure  menuItem.price.amount and menuItem.price.amount. If not falls back to 'undefined'
+    const itemPrice = menuItem.price && menuItem.price.amount ? menuItem.price.amount :
+      menuItem.price ? menuItem.price : undefined;
+    // Returns Price HTML if valid price is available if no price data is available empty string is returned
+    return itemPrice ?
+      <Box component="div" sx={{ mt: 1 }} style={{ display: "flex", flexDirection: "row" }}>
+        <Typography variant="body1">
+          Price
+        </Typography>
+        <Typography variant="body1" style={{ marginLeft: "auto" }}>
+          ${itemPrice}
+        </Typography>
+      </Box> : ''
+  }
+
+  /** Returns Image DOM if valid Image data is present if not emptry string is returned */
+  const getImageElement = (menuItem) => {
+    const menuItemHasImage = menuItem.images && menuItem.images.length > 0;
+    return menuItemHasImage ?
+      <CardMedia
+        component="img"
+        height="240"
+        image={menuItem.images[0]}
+        alt="green iguana"
+      /> : '';
+  }
+
+  /** Renders Menu HTML */
   const RenderMenu = (menuItems) =>
     menuItems.filter((el) => {
-      return el.category_id === currentCategoryId + '' || currentCategoryId === 0
+      return el.category_id == currentCategoryId || currentCategoryId === -1
     })
       .map((item) => {
+        // PENDING: Create 72 blank characters
+        let blank72Characters = '_';
+        // [...Array(5).keys()].forEach(element => blank72Characters = blank72Characters + '     ');
+
         return (
           <Grid key={item.id} item sm={6} md={3}>
             <Card >
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="240"
-                  image={item.images.length > 0 ? item.images[0] : `${process.env.PUBLIC_URL}/images/skelitons/image-placeholder.png`}
-                  alt="green iguana"
-                />
+                {getImageElement(item)}
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {item.name}
                   </Typography>
                   <LinesEllipsis
-                    text={item.description}
+                    text={item.description ? item.description : blank72Characters}
                     maxLine='2'
                     ellipsis='...'
                     trimRight
                     basedOn='letters'
                   />
-                  <Box component="div" sx={{ mt: 1 }} style={{ display: "flex", flexDirection: "row" }}>
-                    <Typography variant="body1">
-                      Price
-                    </Typography>
-                    <Typography variant="body1" style={{ marginLeft: "auto" }}>
-                      $10
-                    </Typography>
-                  </Box>
+                  {getPriceElement(item)}
                 </CardContent>
               </CardActionArea>
             </Card>
           </Grid>)
-      });
+  });
 
   return (
     <div>
       <Header restaurant={restaurant}></Header>
       {
-        restaurant === '' || menu.catergories === undefined || menu.items === undefined ?
+        restaurant === '' || menu.categories === undefined || menu.items === undefined ?
           <Container maxWidth="lg"><Alert severity="error" sx={{ mt: 4 }}>Unable to find your restaurant with this subdomain:{CURRENT_SUBDOMAIN}</Alert></Container> :
           <Container maxWidth="lg">
-            <Categories categories={menu.catergories} buttonClickHandler={handleCategoryChange} currentCategoryId={currentCategoryId}></Categories>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
+            <Categories categories={menu.categories} buttonClickHandler={handleCategoryChange} currentCategoryId={currentCategoryId}></Categories>
+            <Grid container spacing={2} sx={{ mt: 1 }} alignItems="stretch">
               {RenderMenu(menu.items)}
             </Grid>
           </Container>
