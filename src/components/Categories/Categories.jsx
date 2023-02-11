@@ -1,26 +1,32 @@
 import React from 'react'
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 export default function Categories(props) {
-    const getButtonVariant = (variantId) => {
-        return variantId === props.currentCategoryId ? 'contained' : 'outlined';
-    }
+
     // color="secondary"
     const getButtons = () => {
         return <>
-            <Button variant={getButtonVariant(-1)} onClick={() => handleButtonClick(-1)}>All</Button>
-            {props.categories.map((category) => {
-                return (
-                    <Button variant={getButtonVariant(category.id)} key={category.id} onClick={() => handleButtonClick(category.id)}>
-                        {category.name}
-                    </Button>
-                );
-            })}
+            <Tabs
+                value={props.currentCategoryId}
+                onChange={(event, value) => handleButtonClick(value)}
+                variant="scrollable"
+                scrollButtons="auto"
+                aria-label="categories"
+            >
+                <Tab label="All 🍛" value={-1} />
+                {props.categories.map((category) => {
+                    return (
+                        <Tab label={category.name} value={category.id} key={category.id}/>
+                    );
+                })}
+            </Tabs>
         </>;
     }
 
     const handleButtonClick = (categoryIdIn) => {
+        console.log(`----`,categoryIdIn);
         props.buttonClickHandler(categoryIdIn);
     }
 

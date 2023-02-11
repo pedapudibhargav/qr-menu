@@ -1,0 +1,38 @@
+.menu-grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.menu-grid-item .MuiButtonBase-root {
+    height: 100%;
+    text-align: left;
+}
+
+.menu-item-title.css-1oxen2w-MuiTypography-root,
+.menu-item-price.MuiTypography-subtitle2 {
+    font-weight: bold;
+}
+
+.menu-item-description {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-grid-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .menu-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

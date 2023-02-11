@@ -1,11 +1,11 @@
 {
     "categories": [
         {
-            "name": "Bebidas",
+            "name": "Bebidas 🥤",
             "id": 0
         },
         {
-            "name": "Tortas",
+            "name": "Tortas 🥪",
             "id": 1
         },
         {
@@ -17,7 +17,7 @@
             "id": 3
         },
         {
-            "name": "Tacos",
+            "name": "Tacos 🌮",
             "id": 4
         },
         {
@@ -25,11 +25,11 @@
             "id": 5
         },
         {
-            "name": "Cocktail",
+            "name": "Cocktail 🍸",
             "id": 6
         },
         {
-            "name": "Seafood",
+            "name": "Seafood 🍤",
             "id": 7
         },
         {
@@ -61,7 +61,7 @@
             "id": 14
         },
         {
-            "name": "Burritos",
+            "name": "Burritos 🌯",
             "id": 15
         },
         {
